@@ -1,0 +1,74 @@
+.select-coins-div {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: flex-start;
+  align-items: flex-start; /* Align items to the start */
+  gap: 1.5rem;
+  margin: 1.5rem 3rem;
+}
+
+.select-flex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  width: 100%; /* Ensure full width for the inputs */
+}
+
+.select-flex p {
+  color: var(--white);
+  margin: 0; /* Remove default margin */
+  font-size: 1rem; /* Adjust font size as needed */
+}
+
+.MuiAutocomplete-root {
+  width: 100%; /* Ensure the autocomplete takes full width */
+}
+
+.MuiInputBase-root {
+  height: 2.5rem; /* Match the specified height */
+  color: var(--white);
+  background-color: transparent; /* Ensure background is transparent */
+  border-radius: 0.5rem; /* Add a slight border radius */
+  padding: 0 1rem; /* Add padding for better spacing */
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: var(--white); /* Set border color */
+  transition: border-color 0.3s ease-in-out; /* Smooth transition for border color */
+}
+
+.MuiSvgIcon-root {
+  color: var(--white);
+}
+
+.MuiAutocomplete-root:hover .MuiOutlinedInput-notchedOutline {
+  border-color: #3a80e9; /* Change border color on hover */
+}
+
+.MuiAutocomplete-listbox {
+  background-color: var(--black); /* Assuming var(--black) is defined in your CSS */
+  color: var(--white);
+  border-radius: 0.5rem; /* Add border radius to the list box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow for better visibility */
+}
+
+.MuiAutocomplete-option {
+  color: var(--white);
+  transition: background-color 0.2s ease-in-out; /* Smooth transition for background color */
+}
+
+.MuiAutocomplete-option:hover {
+  background-color: rgba(58, 128, 233, 0.1); /* Add background color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .select-coins-div {
+    margin: 1rem 1.5rem;
+  }
+
+  .select-flex p {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}

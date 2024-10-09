@@ -1,0 +1,99 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  position: sticky;
+  top: 0;
+  background-color: rgb(2, 3, 76);
+  z-index: 1000;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 2px 5px rgba(70, 43, 43, 0.2);
+}
+
+.header:hover {
+  background-color: rgb(3, 41, 103);
+  transform: perspective(500px) rotateX(5deg);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.header h1 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 600;
+  transition: transform 0.3s, color 0.3s;
+  text-shadow: 1px 1px 5px pink;
+}
+
+.header h1:hover {
+  color: rgb(0, 128, 124);
+  transform: perspective(500px) rotateY(10deg);
+  text-shadow: 2px 2px 10px var(--black);
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s;
+}
+
+.links:hover {
+  transform: perspective(500px) rotateZ(5deg);
+}
+
+.link {
+  font-size: 0.8rem;
+  color: var(--grey);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+  text-shadow: 1px 1px 5px var(--black);
+}
+
+.link:hover {
+  color: var(--white);
+  transform: perspective(500px) rotateX(-10deg);
+  text-shadow: 2px 2px 10px var(--black);
+}
+
+.drawer-component {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .links {
+    display: none;
+  }
+
+  .drawer-component {
+    display: block;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+
+  .drawer-component:hover {
+    background-color: rgb(60, 90, 10);
+    transform: perspective(500px) rotateY(5deg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .header {
+    padding: 0.5rem 1.5rem;
+    transition: transform 0.3s;
+  }
+
+  .drawer-div {
+    width: 40vw;
+    background-color: var(--black);
+    height: 100vh;
+    padding: 0.5rem 1.5rem;
+    transition: transform 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .drawer-div:hover {
+    transform: perspective(500px) rotateX(-5deg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  }
+}
